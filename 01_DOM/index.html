@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting HTML Elements | JS DOM</title>
+</head>
+<body>
+
+    <div class="dom">
+
+        <div class="dom-types">
+            <h1>Getting HTML Elements with DOM Methods</h1>
+
+            <p id="demo" class="demo-class">Hello World!</p>
+
+    
+            <h3> Get element by id</h3>
+            var element = document.getElementById("demo");
+            console.log(element);
+
+            	<h3>Get element by tag name</h3>
+            var elements = document.getElementsByTagName("p");
+            console.log(elements);
+
+             <h3>Get element by class name</h3>
+            var elements = document.getElementsByClassName("demo-class");
+            console.log(elements);
+
+            <h3>Get element by query selector</h3>
+            var element = document.querySelector("#demo");
+             console.log(element);
+
+            <h3>Get element by query selector all</h3>
+            var elements = document.querySelectorAll(".demo");
+            console.log(elements);
+
+        </div>
+         
+        
+        <div class="dom-type">
+
+            <h1>Getting HTML Elements with DOM Attributes</h1>
+
+            <p id="demo" class="demo-class"> DOM Attributes </p>
+
+            element.getAttributes("name")
+            element.setAttributes("name", "value")
+
+            <h3>Attribute Presence vs value</h3>
+
+            bin.getAttribute("disabled") // true <br>
+            bin.setAttribute("disabled") // "disabled" <br>
+            bin.getAttribute("class") // "bin" <br>
+            bin.setAttribute("class", "bin") // "bin" <br>
+            bin.removeAttribute("class") // null <br>
+            bin.hasAttribute("class") // false <br>
+            bin.hasAttribute("disabled") // true <br>
+            bin.deleteAttribute("disabled") // null <br>
+
+            <p> Please <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target="_blank" >Check MDN Attribute CSS Selectors</a></p>
+                        <p> Please <a href=" https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors"  target="_blank" >Check MDN Attribute Selectors</a></p>
+
+           <p> Pleas <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors" target="_blank" > CSS Selectors</a></p>
+
+
+         </div>
+    
+
+
+    </div>
+   
+    
+</body>
+</html>

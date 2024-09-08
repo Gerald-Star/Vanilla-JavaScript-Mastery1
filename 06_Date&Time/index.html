@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random Clock</title>
+
+    <!-- style -->
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #clock {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        #time {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <header>
+        <h1>Clock</h1>
+    </header>
+    <main class="container"> 
+        <article>
+            <div id="clock">
+                <p id="time">
+
+                </p>
+            </div>
+        </article>
+
+    </main>
+
+    
+    <script id="clock.js">
+        
+
+        const time = document.getElementById("time");
+
+        function getRandomNumber(max) {
+            return Math.floor(Math.random() * max);
+        } 
+
+        function updateTime() {
+            const currentTime = new Date();
+            const [x, y] = [getRandomNumber(89), getRandomNumber(89)];
+            const color = `hsl(${getRandomNumber(360)}, 100%, 50%)`;
+            time.innerText = currentTime.toLocaleTimeString();
+            time.setAttribute("style", `top: ${x}% left: ${y}%; color: ${color}`  )
+        }
+
+        updateTime();
+        setInterval(() =>  updateTime(), 3000);
+        
+    </script>
+</body>
+</html>
